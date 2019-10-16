@@ -5,7 +5,7 @@ class TodoList
     @todo_array = []
   end
 
-  def add(text)
-    @text = text
+  def add(todo)
+    @todo_array.push(todo)
   end
 end
