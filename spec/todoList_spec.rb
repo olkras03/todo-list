@@ -14,4 +14,17 @@ describe TodoList do
     expect(todo_list).to respond_to(:add).with(1).argument
   end
 
+  it "should create an empty array" do
+    todo_list = TodoList.new
+    todo_list.todo_array
+    expect(todo_list.todo_array).to be_empty
+  end
+
+  it "should take todo obejct and add to Todolist object" do
+    todo_list = TodoList.new
+    todo = Todo.new("string")
+    todo_list.add(todo)
+    expect(todo_list.todo_array.length).to eq(1)
+
+  end
 end
