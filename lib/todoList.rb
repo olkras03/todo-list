@@ -6,6 +6,6 @@ class TodoList
   end
 
   def add(todo)
-    @todo_array.push(todo)
+    @todo_array << todo
   end
 end

@@ -16,8 +16,8 @@ describe TodoList do
 
   it "should create an empty array" do
     todo_list = TodoList.new
-    todo_list.todo_array
-    expect(todo_list.todo_array).to be_empty
+    a = todo_list.todo_array
+    expect(a).to be_empty
   end
 
   it "should take todo obejct and add to Todolist object" do
@@ -25,6 +25,13 @@ describe TodoList do
     todo = Todo.new("string")
     todo_list.add(todo)
     expect(todo_list.todo_array.length).to eq(1)
-
   end
+
+  it "should the string we pass to add" do
+    todo_list = TodoList.new
+    todo = Todo.new("string")
+    todo_list.add(todo)
+    expect(todo_list.todo_array.first.task).to include("string")
+  end
+
 end
