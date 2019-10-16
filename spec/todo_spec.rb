@@ -1,14 +1,17 @@
-require 'todo.rb'
+require 'todo'
 
 describe Todo do
- 
-  it 'creates an instance of Todo class' do
-   todo_list = Todo.new(text)
-   expect(todo_list).to be_instance_of Todo 
+  it "should be an instance of the class" do
+  todo = Todo.new("string")
+  expect(todo).to be_an_instance_of(Todo) 
   end
 
-  it 'creates parameter and stores it on todo_list object' do
-    todo_list = Todo.new("buy milk")
-    expect(todo_list.text).to eq("buy milk")
+  it "can take a string as argument" do
+    todo = Todo.new("this is a string")
+    expect(todo.text).to eq("this is a string")
+
   end
+
+
 end
+
