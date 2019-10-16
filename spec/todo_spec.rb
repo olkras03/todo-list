@@ -8,7 +8,7 @@ describe Todo do
 
   it "can take a string as argument" do
     todo = Todo.new("this is a string")
-    expect(todo.text).to eq("this is a string")
+    expect(todo.task).to eq("this is a string")
 
   end
 

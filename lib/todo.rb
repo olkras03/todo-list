@@ -1,8 +1,8 @@
 class Todo
-  attr_reader :text
+  attr_reader :task
 
   def initialize(text)
-     @text = text
+     @task = text
   end
 
 end

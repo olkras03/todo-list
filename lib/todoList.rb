@@ -1,4 +1,7 @@
 class TodoList
-  def add
+  attr_reader :text
+
+  def add(text)
+    @text = text
   end
 end

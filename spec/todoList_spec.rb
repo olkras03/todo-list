@@ -10,7 +10,8 @@ describe TodoList do
 
   it "should add task to the to do list" do
     todo_list = TodoList.new
-    todo_list.add
-    expect(todo_list).to respond_to(:add)
+    todo_list.add("string")
+    expect(todo_list).to respond_to(:add).with(1).argument
   end
+
 end
